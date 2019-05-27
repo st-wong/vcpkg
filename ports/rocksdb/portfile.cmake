@@ -3,9 +3,9 @@ include(vcpkg_common_functions)
 vcpkg_from_github(
   OUT_SOURCE_PATH SOURCE_PATH
   REPO facebook/rocksdb
-  REF v6.0.2
-  SHA512 6659f04c9823750b9b635e2a247b59dbda4975458615392df82bdbeb4ac7ac783e6de86a32fcc318aae1bb27880557390c544c99caa3db3885f9c3d836cc1df8
-  HEAD_REF master
+  REF v5.18.3
+  SHA512 5f8c9e66dd7d7f1071dbbdd0442519df403f92876f9ed120b6a89788446cabf86275866a8ea273ab6fcb9d62cc7f3dc4d5b1684aa39c3956eea47b5b93938d54
+  HEAD_REF 5.18.fb
   PATCHES
     0001-disable-gtest.patch
     0002-only-build-one-flavor.patch
@@ -52,7 +52,7 @@ vcpkg_configure_cmake(
   SOURCE_PATH ${SOURCE_PATH}
   PREFER_NINJA
   OPTIONS
-  -DWITH_GFLAGS=0
+  -DWITH_GFLAGS=1
   -DWITH_SNAPPY=${WITH_SNAPPY}
   -DWITH_LZ4=${WITH_LZ4}
   -DWITH_ZLIB=${WITH_ZLIB}

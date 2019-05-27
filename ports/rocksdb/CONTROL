@@ -1,7 +1,7 @@
 Source: rocksdb
-Version: 6.0.2
+Version: 5.18.3
 Description: A library that provides an embeddable, persistent key-value store for fast storage
-Default-Features: zlib
+Default-Features: snappy
 
 Feature: lz4
 Build-Depends: lz4
